@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <!-- This line tells mobile browsers to scale the site correctly -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ENVB</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+
+        <!-- 1. BACKDROP HITBOX OVERLAY -->
+        <div id="sidebar-overlay" class="sidebar-overlay" onclick="toggleSidebar()"></div>
+
+        <!-- 2. TOP BANNER HEADER -->
+        <header class="header1">
+            <h1 class="h1"> MAIN PAGE </h1>
+            
+            <button id="menu-btn" class="button1" onclick="toggleSidebar()">
+                <!-- Pure CSS Burger Icon is drawn here via style.css -->
+            </button>
+
+            <hr class="hr1">
+        </header>
+
+        <!-- 3. SLIDE OUT NAVIGATION SIDEBAR -->
+        <aside id="sidebar" class="sidebar">
+            <nav class="sidebar-nav">
+                <a href="aboutme.html" class="sidebar-link">About me</a>
+                <a href="contact.html" class="sidebar-link">Contact</a>
+                
+                <div class="dropdown">
+                    <a href="#" class="sidebar-link dropdown-trigger">My work</a>
+                    <div class="dropdown-content">
+                        <a href="https://envilix.github.io/WNT8_analysis/">WNT8</a>
+                        <a href="#">GDF8 & GDF11</a>
+                        <a href="#">Panthera Uncia</a>
+                        <a href="#">High Altitude Adaptation</a>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- ADD YOUR NAME HERE (Change "Your Name" to your real name) -->
+            <div class="sidebar-footer">𝓝𝓮𝓶𝓪𝓷𝓳𝓪 𝓖𝓻𝓮𝓫𝓲𝓬</div>
+        </aside>
+
+
+        <!-- 4. TEXT CONTAINER PANEL -->
+        <main class="content-box">
+            <h2>Welcome</h2>
+            <p>Nature.... it's a beautiful thing. I mean, we have coutless species around us. Each one special in its own way, they are special because they exist. Because evolution worked and made them. Made life out of scratch. And nowadays, we take that for granted. We destroy it, we poison it. We have driven coutless animal species to extinction, just because of our negligence and lack of care. Each day about 200 species go extinct. As someone who enjoys nature for what it offers, i will always stand to protect it and do my best in helping bring these creatures back from extinction. I will support companies like Colossal Biosciences in their efforts, and conduct my own research and try to help in that way.... well at least the research i am able to conduct.</p>
+        </main>
+
+        <!-- 5. INTERACTIVE JAVASCRIPT CONTROLLER -->
+        <script>
+        function toggleSidebar() {
+            var sidebar = document.getElementById("sidebar");
+            var overlay = document.getElementById("sidebar-overlay");
+            
+            sidebar.classList.toggle("open");
+            overlay.classList.toggle("active");
+        }
+        </script>
+
+    </body>
+</html>

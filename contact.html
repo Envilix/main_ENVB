@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contact - ENVB</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+
+        <!-- 1. POZADINSKI OVERLAY ZA ZATVARANJE MENIJA -->
+        <div id="sidebar-overlay" class="sidebar-overlay" onclick="toggleSidebar()"></div>
+
+        <!-- 2. GORNJI NAVIGACIONI BANNER -->
+        <header class="header1">
+            <h1 class="h1"> CONTACT </h1>
+            
+            <button id="menu-btn" class="button1" onclick="toggleSidebar()">
+                <!-- CSS burger ikonica se iscrtava automatski -->
+            </button>
+
+            <hr class="hr1">
+        </header>
+
+        <!-- 3. STRANI GLASMORPHISM MENI -->
+        <aside id="sidebar" class="sidebar">
+            <nav class="sidebar-nav">
+                <a href="index.html" class="sidebar-link">Main Page</a>
+                <!-- Povezana tvoja nova aboutme.html stranica -->
+                <a href="aboutme.html" class="sidebar-link">About me</a>
+                
+                <div class="dropdown">
+                    <a href="#" class="sidebar-link dropdown-trigger">My work</a>
+                    <div class="dropdown-content">
+                        <a href="https://envilix.github.io/WNT8_analysis/">WNT8</a>
+                        <a href="#">GDF8 & GDF11</a>
+                        <a href="#">Panthera Uncia</a>
+                        <a href="#">High Altitude Adaptation</a>
+                    </div>
+                </div>
+            </nav>
+            <div class="sidebar-footer">𝓝𝓮𝓶𝓪𝓷𝓳𝓪 𝓖𝓻𝓮𝓫𝓲𝓬</div>
+        </aside>
+
+        <!-- 4. CENTRALNA STAKLENA KARTICA SA KONTAKT FORMOM -->
+        <main class="content-box">
+            <h2>Get in Touch</h2>
+            <p style="margin-bottom: 30px; color: #b0b0b0;">Questions, collaborations, and research discussions are welcome.</p>
+            
+            <!-- POPRAVLJEN LINK ZA USPEŠNO SLANJE NA GITHUB-U -->
+            <form class="contact-form" action="https://web3forms.com" method="POST">
+                
+                <!-- Tvoj lični ključ sa ekrana koji šalje mail na nemanjagrebic@gmail.com -->
+                <input type="hidden" name="access_key" value="5117788f-56c4-458b-a28a-1cebb0859144">
+
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required placeholder="Your name">
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required placeholder="Your email address">
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" required placeholder="Type your message here..."></textarea>
+                </div>
+                
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </main>
+
+        <!-- 5. INTERAKTIVNI INTERFEJS KONTROLER -->
+        <script>
+        function toggleSidebar() {
+            var sidebar = document.getElementById("sidebar");
+            var overlay = document.getElementById("sidebar-overlay");
+            
+            sidebar.classList.toggle("open");
+            overlay.classList.toggle("active");
+        }
+        </script>
+
+    </body>
+</html>

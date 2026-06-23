@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>About Me - ENVB</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+
+        <!-- 1. POZADINSKI OVERLAY ZA ZATVARANJE MENIJA -->
+        <div id="sidebar-overlay" class="sidebar-overlay" onclick="toggleSidebar()"></div>
+
+        <!-- 2. GORNJI NAVIGACIONI BANNER -->
+        <header class="header1">
+            <h1 class="h1"> ABOUT ME </h1>
+            
+            <button id="menu-btn" class="button1" onclick="toggleSidebar()">
+                <!-- CSS burger ikonica se iscrtava automatski -->
+            </button>
+
+            <hr class="hr1">
+        </header>
+
+        <!-- 3. STRANI GLASMORPHISM MENI -->
+        <aside id="sidebar" class="sidebar">
+            <nav class="sidebar-nav">
+                <a href="index.html" class="sidebar-link">Main Page</a>
+                <a href="contact.html" class="sidebar-link">Contact</a>
+                
+                <div class="dropdown">
+                    <a href="#" class="sidebar-link dropdown-trigger">My work</a>
+                    <div class="dropdown-content">
+                        <a href="https://envilix.github.io/WNT8_analysis/">WNT8</a>
+                        <a href="#">GDF8 & GDF11</a>
+                        <a href="#">Panthera Uncia</a>
+                        <a href="#">High Altitude Adaptation</a>
+                    </div>
+                </div>
+            </nav>
+            <div class="sidebar-footer">𝓝𝓮𝓶𝓪𝓷𝓳𝓪 𝓖𝓻𝓮𝓫𝓲𝓬</div>
+        </aside>
+
+        <!-- 4. CENTRALNA STAKLENA KARTICA SA BIOGRAFIJOM -->
+        <main class="content-box">
+            <h2>Nemanja Grebić</h2>
+            <p style="color: #b0b0b0; font-style: italic; margin-bottom: 30px;">High School Student & Aspiring Geneticist</p>
+            
+            <p class="intro-text">
+                Welcome to my research space. I am a high school student with a deep passion for molecular biology and conservation science. My ultimate goal is to graduate in Genetics and Bioengineering, pursue a PhD, and one day secure a position at Colossal Biosciences to directly contribute to their pioneering work.
+            </p>
+            
+            <p class="intro-text">
+                I strongly advocate for genetic rescue technologies and closely follow advancements in de-extinction. I believe that modern bioengineering tools are becoming essential resources for restoring degraded ecosystems and reversing anthropogenic ecological damage.
+            </p>
+
+            <p class="intro-text">
+                Through this platform, I aim to document my learning journey, share my independent insights, and map out findings regarding growth factors, evolutionary biology, and genetic synthesis.
+            </p>
+
+            <!-- NOVI PASUS: Deljenje radova i prevođenje na jednostavan jezik -->
+            <p class="intro-text">
+                Furthermore, I intend to use this platform to share my scientific papers, making them highly accessible by describing my findings in a clear, non-scientific style so that anyone can easily understand and connect with the research.
+            </p>
+        </main>
+
+        <!-- 5. INTERAKTIVNI INTERFEJS KONTROLER -->
+        <script>
+        function toggleSidebar() {
+            var sidebar = document.getElementById("sidebar");
+            var overlay = document.getElementById("sidebar-overlay");
+            
+            sidebar.classList.toggle("open");
+            overlay.classList.toggle("active");
+        }
+        </script>
+
+    </body>
+</html>
